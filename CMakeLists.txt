@@ -11,6 +11,7 @@ set(CMAKE_PREFIX_PATH "${CMAKE_PREFIX_PATH};/opt/ros/kinetic")
 find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
+  std_srvs
   message_generation
 )
 
@@ -51,6 +52,7 @@ find_package(catkin REQUIRED COMPONENTS
  add_message_files(
    FILES
    LightSensorValues.msg
+   MotorFreqs.msg
 #   Message1.msg
 #   Message2.msg
  )
@@ -107,7 +109,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES pimouse_ros
-  CATKIN_DEPENDS rospy std_msgs message_runtime #Add
+  CATKIN_DEPENDS rospy std_msgs std_srvs message_runtime #Add
 #  DEPENDS system_lib
 )
 
